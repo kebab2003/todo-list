@@ -15,7 +15,14 @@ class AppHeader extends Component {
     return (
       <header className="header">
         <h1>todos</h1>
-        <NewTaskForm onInput={this.props.onInput} inputValue={this.props.inputValue} onEnter={this.props.onEnter} />
+        <NewTaskForm
+          minutes={this.props.minutes}
+          seconds={this.props.seconds}
+          handleInputChange={this.props.handleInputChange}
+          onInput={this.props.onInput}
+          inputValue={this.props.inputValue}
+          onEnter={this.props.onEnter}
+        />
       </header>
     );
   }

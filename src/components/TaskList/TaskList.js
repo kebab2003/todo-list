@@ -16,6 +16,11 @@ class TaskList extends Component {
           .map((todo) => (
             <li key={todo.id} className={todo.mode}>
               <Task
+                minutes={todo.minutes}
+                seconds={todo.seconds}
+                timeLeft={todo.timeLeft}
+                startTimer={this.props.startTimer}
+                pauseTimer={this.props.pauseTimer}
                 label={todo.label}
                 onDeleteItem={this.props.onDeleteItem}
                 id={todo.id}
